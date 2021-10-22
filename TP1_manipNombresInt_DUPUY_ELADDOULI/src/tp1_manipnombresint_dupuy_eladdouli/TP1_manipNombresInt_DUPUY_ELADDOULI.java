@@ -35,6 +35,9 @@ public class TP1_manipNombresInt_DUPUY_ELADDOULI {
       V2 = sc.nextInt();
       System.out.println ("Entiers 2 : " + V2);
     
+      
+      
+      
     }
     
 }
