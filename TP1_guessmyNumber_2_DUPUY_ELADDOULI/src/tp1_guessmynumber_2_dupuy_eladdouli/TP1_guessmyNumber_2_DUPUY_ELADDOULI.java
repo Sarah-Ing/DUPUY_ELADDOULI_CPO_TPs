@@ -52,7 +52,7 @@ public class TP1_guessmyNumber_2_DUPUY_ELADDOULI {
         D = sc.nextInt();
         
         
-        if (D==1)
+        if (D==1) // niveau facile
         {
         
         int e = 0; // new valeur 
@@ -88,7 +88,7 @@ public class TP1_guessmyNumber_2_DUPUY_ELADDOULI {
         
         }
         
-        if (D==2)
+        if (D==2) //niveau normal
         {
         
         int e = 0; // new valeur 
@@ -119,22 +119,33 @@ public class TP1_guessmyNumber_2_DUPUY_ELADDOULI {
         System.out.println ("Gagné !");
         }
         }
-        
+        if (compteur>5)
+        {System.out.println ("Beaucoup trop d'essais....... :( ");
+        }
+        else {
          System.out.println ("Nombre de tentatives exécutées : " + compteur);
-        
         }
-        if (D==3)
-        {
+        }
         
+        if (D==3) // niveau difficile
+        {
+        int n2 = generateurAleat.nextInt(200);
         int e = 0; // new valeur 
-        System.out.println ("Saisir un NOUVEAU nombre entre 0 et 100 : ");
+        System.out.println ("Saisir un NOUVEAU nombre entre 0 et 200 : ");
         e = sc.nextInt();
         
         int compteur = 0;
         
-        while (e!= n)
+        while (e!= n2)
         {
-        if (e<n)
+            if (e < n2-100)
+        {
+        System.out.println ("Beaucoup trop petit");
+        System.out.println ("Nouvel essai : ");
+        e = sc.nextInt();
+        compteur = compteur +1;
+        }
+        if (e<n2)
         {
         System.out.println ("Trop petit");
         System.out.println ("Nouvel essai : ");
@@ -142,17 +153,26 @@ public class TP1_guessmyNumber_2_DUPUY_ELADDOULI {
         compteur = compteur +1;
         }
     
-        if (e>n)
+        if (e>n2)
         {
         System.out.println ("Trop grand");
         System.out.println ("Nouvel essai : ");
         e = sc.nextInt();
         }
+        
+        if (e < n2+100)
+        {
+        System.out.println ("Beaucoup trop grand");
+        System.out.println ("Nouvel essai : ");
+        e = sc.nextInt();
+        compteur = compteur +1;
+        }
 
-         if (e==n)
+         if (e==n2)
         {
         System.out.println ("Gagné !");
         }
+         
         }
         
          System.out.println ("Nombre de tentatives exécutées : " + compteur);
@@ -164,6 +184,6 @@ public class TP1_guessmyNumber_2_DUPUY_ELADDOULI {
         
     }
     
-     
- 
+    
+   
 }
