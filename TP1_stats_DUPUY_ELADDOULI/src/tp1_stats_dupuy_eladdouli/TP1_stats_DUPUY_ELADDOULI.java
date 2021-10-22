@@ -26,7 +26,7 @@ public class TP1_stats_DUPUY_ELADDOULI {
         int m = 0;
         int s =0;
         
-        int [] Tab = new int[5]; 
+        int [] Tab = new int[6]; 
         System.out.println ("Saisir un nombre entier : ");
         m = sc.nextInt();
     
@@ -42,7 +42,7 @@ public class TP1_stats_DUPUY_ELADDOULI {
         for (int j = 0; j <= 5; j++) 
         {
         d = (Tab[j]*100)/m;
-        System.out.println (d);
+        System.out.println ("Résultat ligne " + (j+1) +" : "+ d + " %");
         }
          
     }
