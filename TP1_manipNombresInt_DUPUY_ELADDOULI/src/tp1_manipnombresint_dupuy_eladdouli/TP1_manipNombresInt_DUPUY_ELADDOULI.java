@@ -20,7 +20,7 @@ public class TP1_manipNombresInt_DUPUY_ELADDOULI {
     public static void main(String[] args) {
         
         int V1;
-        int V2;
+        double V2;
         
         Scanner sc = new Scanner(System.in);
         System.out.println ("Entiers 1 : ");
@@ -32,12 +32,14 @@ public class TP1_manipNombresInt_DUPUY_ELADDOULI {
      
      
       System.out.println ("Entiers 2 : ");
-      V2 = sc.nextInt();
+      V2 = sc.nextDouble();
       System.out.println ("Entiers 2 : " + V2);
-    
-      
-      
+      //System.out.println ("Somme des deux entiers = " + (V1+V2));
+      // System.out.println ("Différence des deux entiers = " + (V1-V2));
+      //System.out.println ("Produit des deux entiers = " + (V1*V2));
+      System.out.println ("Quotient des deux entiers = " + (V1/V1) +"et reste de la division euclidienne = " + (V1%V2));
       
     }
     
+      
 }
